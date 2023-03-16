@@ -3,7 +3,7 @@ set menu-timeout 5000
 set submenu-timeout ${menu-timeout}
 
 :start
-menu texthere iPXE Boot Menu
+menu yourtexthere iPXE Boot Menu
 item --gap --  ------------------------------------------------------------
 item --key a bcld1 (a) Facet uBCLD F11 (via Facet serverveerder lokaal)
 #item --key a bcld3 (k) Facet uBCLD F11 (via Facet serverveerder lokaal) Geen URL
