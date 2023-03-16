@@ -81,7 +81,7 @@ boot
 boot || prompt --key s --timeout 10000 Chainloading failed, hit 's' for the iPXE shell; reboot in 10 seconds && shell || reboot
 
 :Clonezilla
-set boot-url http://iphere
-kernel ${boot-url}/tools/clonezilla-live/vmlinuz boot=live config noswap nolocales edd=on nomodeset vga=788 nosplash noprompt fetch=http://iphere/tools/clonezilla-live/filesystem.squashfs
+set boot-url http://10.200.40.80
+kernel ${boot-url}/tools/clonezilla-live/vmlinuz initrd=initrd.img boot=live config noswap nolocales edd=on nomodeset vga=788 nosplash noprompt fetch=http://10.200.40.80/tools/clonezilla-live/filesystem.squashfs
 initrd ${boot-url}/tools/clonezilla-live/initrd.img
 boot
