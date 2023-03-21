@@ -31,8 +31,8 @@ boot
 goto start
 
 :bcld1 #with sound fix for HP Probook laptops
-kernel http://10-151.ydns.eu:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.display.preset=1080p snd_hda_intel.dmic_detect=0" bcld.afname.url=https://afname.facet.onl/facet-player-assessment url=http://iphere:8666/facet/bcld.iso
-initrd http://10-151.ydns.eu:8666/facet/INITRD
+kernel http://iphere:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.display.preset=1080p snd_hda_intel.dmic_detect=0" bcld.afname.url=https://afname.facet.onl/facet-player-assessment url=http://iphere:8666/facet/bcld.iso
+initrd http://iphere:8666/facet/INITRD
 boot
 goto start
 
@@ -50,8 +50,8 @@ boot
 goto start
 
 :bcld4
-kernel http://10-100.ydns.eu:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.display.preset=1080p bcld.afname.url=https://iphere/facet-afname" url=http://iphere:8666/facet/bcld.iso
-initrd http://10-100.ydns.eu:8666/facet/INITRD
+kernel http://iphere:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.display.preset=1080p bcld.afname.url=https://iphere/facet-afname" url=http://iphere:8666/facet/bcld.iso
+initrd http://iphere:8666/facet/INITRD
 boot
 goto start
 
