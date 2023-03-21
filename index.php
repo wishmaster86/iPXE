@@ -24,11 +24,18 @@ goto ${selected}
 reboot
 
 
-:bcld1
-kernel http://iphere:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0" bcld.display.preset=1080p url=http://iphere:8666/facet/bcld.iso
+:bcld1 #with 1080p resolution fix for Dell 3310
+kernel http://iphere:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.display.preset=1080p" url=http://iphere:8666/facet/bcld.iso
 initrd http://iphere:8666/facet/INITRD
 boot
 goto start
+
+:bcld1 #with sound fix for HP Probook laptops
+kernel http://10-151.ydns.eu:8666/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.display.preset=1080p snd_hda_intel.dmic_detect=0" bcld.afname.url=https://afname.facet.onl/facet-player-assessment url=http://iphere:8666/facet/bcld.iso
+initrd http://10-151.ydns.eu:8666/facet/INITRD
+boot
+goto start
+
 
 :bcld2
 kernel http://iphere/facet/VMLINUZ initrd=INITRD rhgb boot=casper ip=dhcp toram set bcldparameters="quiet loglevel=0 systemd.show_status=auto rd.udev.log_priority=3 selinux=0 bcld.afname.url=https://afname.facet.onl/facet-player-assessment" url=http://1iphere/facet/bcld.iso
