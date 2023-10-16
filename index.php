@@ -92,3 +92,6 @@ set boot-url http://10.200.40.80
 kernel ${boot-url}/tools/clonezilla-live/vmlinuz initrd=initrd.img boot=live config noswap nolocales edd=on nomodeset vga=788 nosplash noprompt fetch=http://10.200.40.80/tools/clonezilla-live/filesystem.squashfs
 initrd ${boot-url}/tools/clonezilla-live/initrd.img
 boot
+
+
+"https://lowtac.nl/a3s-Repos/Moderne/autoconfig"
